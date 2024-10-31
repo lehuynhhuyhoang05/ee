@@ -1,0 +1,374 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #151d2e;
+  }
+  
+  /* Background Decorations */
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 100%, #151d2e, #0b0e14 60%);
+    z-index: -1;
+  }
+  
+  .moon {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 150px;
+    height: 150px;
+    background: #e6e6e6;
+    border-radius: 50%;
+    box-shadow: -10px -10px 30px #c4c4c4, inset 10px 10px 30px #ffffff;
+    opacity: 0.9;
+  }
+  
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: twinkle 3s linear infinite;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+  }
+  
+  /* Ghost Floating Animation */
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Ghost Body and Parts */
+  .one, .two, .three, .four, .five, .six {
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .one {
+    position: absolute;
+    width: 153px;
+    height: 217px;
+    left: 173px;
+    top: 89px;
+    border-radius: 100px 100px 0px 0px;
+  }
+  
+  .two {
+    position: absolute;
+    width: 25.71px;
+    height: 67.88px;
+    left: 145px;
+    top: 180px;
+    border-radius: 20px;
+    transform: rotate(-48deg);
+  }
+  
+  .three {
+    position: absolute;
+    width: 25.71px;
+    height: 67.88px;
+    left: 325px;
+    top: 180px;
+    border-radius: 20px;
+    transform: rotate(48deg);
+  }
+  
+  .four {
+    position: absolute;
+    width: 58px;
+    height: 91px;
+    left: 173px;
+    top: 260px;
+    border-radius: 100px;
+  }
+  
+  .five {
+    position: absolute;
+    width: 58px;
+    height: 91px;
+    left: 218px;
+    top: 276px;
+    border-radius: 100px;
+  }
+  
+  .six {
+    position: absolute;
+    width: 58px;
+    height: 91px;
+    left: 268px;
+    top: 272px;
+    border-radius: 100px;
+  }
+  
+  /* Eyes and Mouth */
+  .eye1, .eye2 {
+    position: absolute;
+    width: 65px;
+    height: 37px;
+    top: 136px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    z-index: 10;
+  }
+  
+  .eye1 { left: 250px; }
+  .eye2 { left: 200px; }
+  
+  .eyehole {
+    background: #151d2e;
+    border-radius: 50px;
+    width: 40px;
+    height: 43px;
+  }
+  
+  .mouth {
+    position: absolute;
+    width: 50px;
+    height: 53px;
+    left: 222px;
+    top: 200px;
+    background: #151d2e;
+    border-radius: 50px;
+  }
+  
+  /* Glowing Ghost Effect */
+  .container {
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+  }
+  
+  /* Additional Halloween Styles */
+  
+  /* Halloween Text */
+  .halloween-text {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #ff4b3e;
+    font-family: 'Creepster', cursive;
+    z-index: 5;
+  }
+  
+  /* Enhanced Halloween Text */
+  .halloween-text {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    color: #ff4b3e;
+    font-family: 'Creepster', cursive;
+    text-shadow: 0px 0px 10px #ff7518, 0px 0px 20px #ff4b3e;
+    animation: blink 1s infinite alternate;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; text-shadow: 0px 0px 10px #ff7518, 0px 0px 20px #ff4b3e; }
+    100% { opacity: 0.6; text-shadow: 0px 0px 20px #ff4b3e, 0px 0px 30px #ff7518; }
+  }
+  
+  /* Pumpkin Decorations */
+  .pumpkin {
+    position: absolute;
+    background: linear-gradient(135deg, #ff7518, #ff4500);
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3), inset 0px -5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pumpkin1 {
+    width: 80px;
+    height: 80px;
+    bottom: 30px;
+    left: 30px;
+  }
+  
+  .pumpkin2 {
+    width: 60px;
+    height: 60px;
+    bottom: 50px;
+    left: 100px;
+  }
+  
+  /* Candy Decorations */
+  .candy {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background: linear-gradient(135deg, #ff7518, #ff4b3e);
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .candy1 {
+    bottom: 60px;
+    right: 50px;
+    transform: rotate(-30deg);
+  }
+  
+  .candy2 {
+    bottom: 100px;
+    right: 100px;
+    transform: rotate(30deg);
+  }
+  
+  .candy .wrapper {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background: #ff4b3e;
+    border-radius: 3px;
+  }
+  
+  .candy .wrapper.left { left: -10px; }
+  .candy .wrapper.right { right: -10px; }
+  
+  /* Realistic Pumpkin Decorations */
+  .pumpkin {
+    position: absolute;
+    background: radial-gradient(circle at 50% 50%, #ff7518, #e55a00 70%, #d94800 100%);
+    border-radius: 50%;
+    box-shadow: 
+      0px 4px 10px rgba(0, 0, 0, 0.3),         /* outer shadow */
+      inset 0px -5px 10px rgba(0, 0, 0, 0.2),   /* inner shadow */
+      inset -5px -5px 10px rgba(255, 140, 0, 0.6), /* inner highlight */
+      inset 5px 5px 5px rgba(0, 0, 0, 0.1);     /* subtle shading */
+    overflow: hidden;
+  }
+  
+  /* Pumpkin Stem */
+  .stem {
+    position: absolute;
+    top: -15px;
+    left: 40%;
+    width: 15px;
+    height: 25px;
+    background: #7a5200;
+    border-radius: 5px 5px 0 0;
+    transform: rotate(10deg);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Texture Lines */
+  .texture-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.1) 45%, transparent 50%), /* radial glow */
+      linear-gradient(to top left, rgba(0, 0, 0, 0.05), transparent), /* shadow effect */
+      linear-gradient(0deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.08) 100%);
+    mask-image: radial-gradient(circle at center, transparent, #000 80%);
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+  }
+  
+  /* Pumpkin Face Styling */
+  .pumpkin-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .eye {
+    background: #151d2e;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+  }
+  
+  .left-eye {
+    margin-right: 8px;
+  }
+  
+  .right-eye {
+    margin-left: 8px;
+  }
+  
+  .mouth {
+    background: #151d2e;
+    width: 30px;
+    height: 20px;
+    border-radius: 50% 50% 0 0;
+    margin-top: 5px;
+    transform: translateY(3px);
+  }
+  
+  /* Pumpkin Sizes and Positions */
+  .pumpkin1 {
+    width: 90px;
+    height: 90px;
+    bottom: 30px;
+    left: 30px;
+  }
+  
+  .pumpkin2 {
+    width: 70px;
+    height: 70px;
+    bottom: 100px;
+    left: 90px;
+  }
+  
+  /* Specific Styling to Make Faces Unique */
+  .pumpkin1 .left-eye {
+    transform: translateX(-5px) rotate(10deg);
+  }
+  
+  .pumpkin1 .right-eye {
+    transform: translateX(5px) rotate(-10deg);
+  }
+  
+  .pumpkin1 .mouth {
+    width: 35px;
+    height: 20px;
+    border-radius: 0 0 20px 20px;
+    margin-top: 8px;
+  }
+  
+  .pumpkin2 .left-eye, .pumpkin2 .right-eye {
+    transform: scale(0.8);
+  }
+  
+  .pumpkin2 .mouth {
+    width: 28px;
+    height: 18px;
+    border-radius: 10px 10px 0 0;
+    margin-top: 8px;
+    transform: translateY(5px) rotate(5deg);
+  }
+  
